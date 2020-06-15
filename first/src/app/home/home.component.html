@@ -1,0 +1,13 @@
+<p>home works!</p>
+<h2>My Users</h2>
+<ul>
+	<li *ngFor="let user of users">
+		<input type="text" name="idUser" value="{{user.id}}">
+		<input type="text" name="nameUser" value="{{user.name}}">
+		<button (click)="removeUser(user.id)">Delete</button>
+		<button (click)="editUser(user.id)">Edit</button>
+	</li>
+</ul>
+<input type="text" [(ngModel)]="idValue" name="id"><br>
+<input type="text" [(ngModel)]="nameValue" name="name"><br>
+<button (click)="onclick(idValue, nameValue)">New user</button>
